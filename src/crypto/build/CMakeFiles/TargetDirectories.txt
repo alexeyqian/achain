@@ -1,0 +1,5 @@
+/Users/xiaofeiqian/achain/src/crypto/build/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/src/crypto/build/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/src/crypto/build/bin/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/src/crypto/build/bin/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/src/crypto/build/bin/CMakeFiles/crypto.dir

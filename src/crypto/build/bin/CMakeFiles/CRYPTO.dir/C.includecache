@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xiaofeiqian/achain/src/crypto/src/ctaes/ctaes.c
+ctaes.h
+/Users/xiaofeiqian/achain/src/crypto/src/ctaes/ctaes.h
+
+/Users/xiaofeiqian/achain/src/crypto/src/ctaes/ctaes.h
+stdint.h
+-
+stdlib.h
+-
+
