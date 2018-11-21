@@ -1,3 +1,14 @@
 /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles/achain.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/achaind/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/achaind/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/achaind/CMakeFiles/achaind.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/qtest/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/qtest/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/programs/qtest/CMakeFiles/qtest.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/test_one.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/main.dir
