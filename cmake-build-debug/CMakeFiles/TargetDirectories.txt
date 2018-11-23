@@ -1,5 +1,16 @@
 /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/chainbase/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/chainbase/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/chainbase/CMakeFiles/chainbase.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/chain/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/chain/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/chain/CMakeFiles/chain.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/app/CMakeFiles/rebuild_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/app/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/libraries/app/CMakeFiles/app.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/programs/CMakeFiles/rebuild_cache.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/programs/CMakeFiles/edit_cache.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/programs/achaind/CMakeFiles/rebuild_cache.dir
@@ -9,6 +20,8 @@
 /Users/xiaofeiqian/achain/cmake-build-debug/programs/qtest/CMakeFiles/edit_cache.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/programs/qtest/CMakeFiles/qtest.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
-/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/test_one.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/test_chainbase.dir
+/Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/test_app.dir
 /Users/xiaofeiqian/achain/cmake-build-debug/tests/CMakeFiles/main.dir

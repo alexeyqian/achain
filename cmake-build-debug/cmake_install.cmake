@@ -29,6 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/Users/xiaofeiqian/achain/cmake-build-debug/libraries/cmake_install.cmake")
   include("/Users/xiaofeiqian/achain/cmake-build-debug/programs/cmake_install.cmake")
   include("/Users/xiaofeiqian/achain/cmake-build-debug/tests/cmake_install.cmake")
 

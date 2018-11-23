@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named chainbase
+
+# Build rule for target.
+chainbase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chainbase
+.PHONY : chainbase
+
+# fast build rule for target.
+chainbase/fast:
+	$(MAKE) -f libraries/chainbase/CMakeFiles/chainbase.dir/build.make libraries/chainbase/CMakeFiles/chainbase.dir/build
+.PHONY : chainbase/fast
+
+#=============================================================================
+# Target rules for targets named chain
+
+# Build rule for target.
+chain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chain
+.PHONY : chain
+
+# fast build rule for target.
+chain/fast:
+	$(MAKE) -f libraries/chain/CMakeFiles/chain.dir/build.make libraries/chain/CMakeFiles/chain.dir/build
+.PHONY : chain/fast
+
+#=============================================================================
+# Target rules for targets named app
+
+# Build rule for target.
+app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 app
+.PHONY : app
+
+# fast build rule for target.
+app/fast:
+	$(MAKE) -f libraries/app/CMakeFiles/app.dir/build.make libraries/app/CMakeFiles/app.dir/build
+.PHONY : app/fast
+
+#=============================================================================
 # Target rules for targets named achaind
 
 # Build rule for target.
@@ -150,6 +189,32 @@ test_one/fast:
 .PHONY : test_one/fast
 
 #=============================================================================
+# Target rules for targets named test_chainbase
+
+# Build rule for target.
+test_chainbase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_chainbase
+.PHONY : test_chainbase
+
+# fast build rule for target.
+test_chainbase/fast:
+	$(MAKE) -f tests/CMakeFiles/test_chainbase.dir/build.make tests/CMakeFiles/test_chainbase.dir/build
+.PHONY : test_chainbase/fast
+
+#=============================================================================
+# Target rules for targets named test_app
+
+# Build rule for target.
+test_app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_app
+.PHONY : test_app
+
+# fast build rule for target.
+test_app/fast:
+	$(MAKE) -f tests/CMakeFiles/test_app.dir/build.make tests/CMakeFiles/test_app.dir/build
+.PHONY : test_app/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -170,9 +235,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... chainbase"
+	@echo "... chain"
+	@echo "... app"
 	@echo "... achaind"
 	@echo "... qtest"
 	@echo "... test_one"
+	@echo "... test_chainbase"
+	@echo "... test_app"
 	@echo "... main"
 .PHONY : help
 

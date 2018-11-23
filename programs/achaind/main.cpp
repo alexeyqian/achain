@@ -4,6 +4,7 @@
 
 //#include "../../src/libraries/protocol/config.hpp"
 //#include "../../src/libraries/manifest/plugins.hpp"
+#include "../../libraries/app/application.hpp"
 
 using namespace std;
 
@@ -20,4 +21,9 @@ int main(int argc, char **argv) {
     for(const std::string& plugin_name: achain::plugin::get_available_plugins())
         node->register_abstract_plugin(achain::plugin::create_plugin(plugin_name, node));
     */
+
+    application* node = new application();
+    node->startup();
+
+    return 0;
 }

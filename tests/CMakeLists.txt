@@ -2,11 +2,12 @@
 enable_testing()
 
 #Prep ourselves for compiling boost
-find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-include_directories (${Boost_INCLUDE_DIRS})
+#find_package(Boost COMPONENTS unit_test_framework filesystem REQUIRED)
+#include_directories (${Boost_INCLUDE_DIRS})
 
 #I like to keep test files in a separate source directory called test
 file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
+#message(">> Boost library dirs: ${Boost_LIBRARY_DIRS}")
 
 #Run through each source
 foreach(testSrc ${TEST_SRCS})
@@ -17,7 +18,7 @@ foreach(testSrc ${TEST_SRCS})
     add_executable(${testName} ${testSrc})
 
     #link to Boost libraries AND your targets and dependencies
-    target_link_libraries(${testName} ${Boost_UNIT_TEST_FRAMEWORK})
+    target_link_libraries(${testName} ${Boost_LIBRARIES} chainbase app)
 
     #I like to move testing binaries into a testBin directory
     #set_target_properties(${testName} PROPERTIES
