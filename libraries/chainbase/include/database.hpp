@@ -5,6 +5,7 @@
 #include <boost/filesystem.hpp>
 #include <boost/interprocess/allocators/allocator.hpp>
 
+#include "object.hpp"
 #include "read_write_mutex_manager.hpp"
 #include "generic_index.hpp"
 #include "environment_check.hpp"
@@ -138,7 +139,7 @@ namespace chainbase {
             }*/
             check_index_exists<MultiIndexType>();
 
-            return *index_type_ptr( _index_map[index_type::value_type::type_id]->get() );
+            return *index_type_ptr(_index_map[index_type::value_type::type_id]->get());
         }
 
         template<typename MultiIndexType, typename ByIndex>
@@ -176,7 +177,7 @@ namespace chainbase {
         }
 
         template<typename ObjectType>
-        const ObjectType *find(oid <ObjectType> key = oid<ObjectType>()) const {
+        const ObjectType *find(oid<ObjectType> key = oid<ObjectType>()) const {
             CHAINBASE_REQUIRE_READ_LOCK("find", ObjectType);
             typedef typename get_index_type<ObjectType>::type index_type;
             const auto &idx = get_index<index_type>().indices();
@@ -196,7 +197,7 @@ namespace chainbase {
         // get an object from object database by oid.
         // oid contains required info: table / index type, and id
         template<typename ObjectType>
-        const ObjectType &get(const oid <ObjectType> &key = oid<ObjectType>()) const {
+        const ObjectType &get(const oid<ObjectType> &key = oid<ObjectType>()) const {
             CHAINBASE_REQUIRE_READ_LOCK("get", ObjectType);
             auto obj = find<ObjectType>(key);
             if (!obj) BOOST_THROW_EXCEPTION(std::out_of_range("unknown key"));
@@ -385,6 +386,7 @@ namespace chainbase {
         std::vector<abstract_index *> _index_list;
 
         //This is a full map (size 2^16) of all possible index designed for constant time lookup
+        // for better search permormance,
         // _index_map = index_list + index_extensions
         std::vector<std::unique_ptr<abstract_index>> _index_map;
 

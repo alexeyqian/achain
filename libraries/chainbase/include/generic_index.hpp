@@ -49,6 +49,7 @@ namespace chainbase {
         id_type_set new_ids;
         // ever time a new undo session is started, old_next_id will store previous _next_id;
         id_type old_next_id = 0;
+        // revision = irriversable block num
         int64_t revision = 0;
     };
 
@@ -367,12 +368,14 @@ namespace chainbase {
         // on_create, on_modify, on_remove are invoked while index is created/modified/updated
         // // and update the undo_state stack
 
+        // listen to general_index create operation, save data to undo_state for future undo if necessary
         void on_create(const value_type &v) {
             if (!enabled()) return;
             auto &head = _stack.back();
             head.new_ids.insert(v.id);
         }
 
+        // listen to general_index modify operation, save data to undo_state for future undo if necessary
         void on_modify(const value_type &v) {
             if (!enabled()) return;
 
@@ -420,10 +423,14 @@ namespace chainbase {
         // consider _stack and _revision fields as undo features for database table
 
         // consider it as a cache list of new/updated/removed records of database table
+        // each start_undo_session will create a undo_state object and put it into this _stack
         boost::interprocess::deque<undo_state_type, allocator<undo_state_type>> _stack;
         // consider it as a revision number of a database table
+        // version number, = block_num
+        // each block_num match to an undo_session, after commit it will not able to change.
         int64_t _revision = 0;
         // consider it as field to store auto-incremented id of a database table
+        // next primary key
         typename value_type::id_type _next_id = 0;
 
         // below two fields are used to validate multi_index (database table)

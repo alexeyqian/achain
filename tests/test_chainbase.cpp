@@ -43,14 +43,32 @@ BOOST_AUTO_TEST_SUITE( test_chainbase )
 
     BOOST_AUTO_TEST_CASE(t_open_and_create)
     {
-        bfs::path temp;
+        bfs::path temp = bfs::unique_path();
         try{
 
             std::cerr << temp.native() << std::endl;
             chainbase::database db;
             BOOST_CHECK_THROW(db.open(temp), std::runtime_error);
 
+            db.open(temp, chainbase::database::read_write, 1024*1024*8);
+            chainbase::database db2;
+            db2.open(temp);
+            // index does not exist in read only database
+            /*
+            BOOST_CHECK_THROW(db2.add_index<book_index>(), std::runtime_error);
+
+            db.add_index< book_index >();
+            // cannot add same index twice
+            BOOST_CHECK_THROW( db.add_index<book_index>(), std::logic_error );
+
+            // index should exist now
+            db2.add_index<book_index>();*/
+
+            BOOST_TEST_MESSAGE("Creating book");
+
+
         }catch(...){
+            bfs::remove_all(temp);
             throw;
         }
     }
