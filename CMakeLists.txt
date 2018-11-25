@@ -28,6 +28,12 @@ if(NOT Boost_FOUND)
     message(">>>>> Boost not found")
 endif()
 
+find_package( Gperftools QUIET )
+if( GPERFTOOLS_FOUND )
+    message( STATUS "Found gperftools; compiling cli_wallet with TCMalloc")
+    list( APPEND PLATFORM_SPECIFIC_LIBS tcmalloc )
+endif()
+
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories("/usr/local/Cellar/boost@1.60/1.60.0/lib")
 message(">> Boost include dirs: ${Boost_INCLUDE_DIRS}")

@@ -1,5 +1,13 @@
 #pragma once
 
+#include <cstdint>
+
+#define CHAINBASE_SET_INDEX_TYPE(OBJECT_TYPE, INDEX_TYPE) \
+    namespace chainbase{template<> struct get_index_type<OBJECT_TYPE> {typedef INDEX_TYPE type;};}
+
+#define CHAINBASE_DEFAULT_CONSTRUCTOR(OBJECT_TYPE) \
+    template<typename Constructor, typename Allocator> OBJECT_TYPE(Constructor& c, Allocator&&){c(*this);}
+
 namespace chainbase {
 
     template<typename T>
@@ -32,12 +40,6 @@ namespace chainbase {
     template<typename T>
     struct get_index_type {
     };
-
-#define CHAINBASE_SET_INDEX_TYPE(OBJECT_TYPE, INDEX_TYPE) \
-    namespace chainbase{template<> struct get_index_type<OBJECT_TYPE> {typedef INDEX_TYPE type;};}
-
-#define CHAINBASE_DEFAULT_CONSTRUCTOR(OBJECT_TYPE) \
-    template<typename Constructor, typename Allocator> OBJECT_TYPE(Constructor& c, Allocator&&){c(*this);}
 
     /**
     * The code we want to implement is this:

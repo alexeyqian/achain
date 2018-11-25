@@ -10,7 +10,7 @@
 #include <boost/multi_index/member.hpp>
 #include <boost/filesystem.hpp>
 
-#include "../libraries/chainbase/chainbase.hpp"
+#include "../libraries/chainbase/include/chainbase.hpp"
 
 using namespace boost;
 using namespace boost::multi_index;

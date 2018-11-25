@@ -1,21 +1,45 @@
 #pragma once
 
+#include <string>
+#include <boost/lexical_cast.hpp>
 #include <boost/interprocess/managed_mapped_file.hpp>
+#include <boost/interprocess/containers/map.hpp>
+#include <boost/interprocess/containers/set.hpp>
+#include <boost/interprocess/containers/flat_map.hpp>
+#include <boost/interprocess/containers/deque.hpp>
+#include <boost/interprocess/containers/string.hpp>
+#include <boost/interprocess/allocators/allocator.hpp>
+#include <boost/interprocess/sync/interprocess_sharable_mutex.hpp>
+#include <boost/interprocess/sync/sharable_lock.hpp>
+#include <boost/interprocess/sync/file_lock.hpp>
+
+#include <boost/multi_index_container.hpp>
 
 namespace chainbase {
+
+    template<typename T>
+    using allocator = boost::interprocess::allocator<T, boost::interprocess::managed_mapped_file::segment_manager>;
+
+    typedef boost::interprocess::basic_string<char, std::char_traits<char>, allocator<char>> shared_string;
+
+    template<typename T>
+    using shared_vector = std::vector<T, allocator<T>>;
+
+    template<typename Object, typename... Args>
+    using shared_multi_index_container = boost::multi_index_container<Object, Args..., chainbase::allocator<Object> >;
 
     template<typename value_type>
     class undo_state {
     public:
         typedef typename value_type::id_type id_type;
-        typedef allocator <std::pair<const id_type, value_type>> id_value_allocator_type;
-        typedef allocator <id_type> id_allocator_type;
+        typedef allocator<std::pair<const id_type, value_type>> id_value_allocator_type;
+        typedef allocator<id_type> id_allocator_type;
 
         typedef boost::interprocess::map<id_type, value_type, std::less<id_type>, id_value_allocator_type> id_value_type_map;
         typedef boost::interprocess::set<id_type, std::less<id_type>, id_allocator_type> id_type_set;
 
         template<typename T>
-        undo_state(allocator <T> al)
+        undo_state(allocator<T> al)
                 :old_values(id_value_allocator_type(al.get_segment_manager()),
                             removed_values(id_value_allocator_type(al.get_segment_manager())),
                             new_ids(id_allocator_type(al.get_segment_manager()))) {}
@@ -23,6 +47,7 @@ namespace chainbase {
         id_value_type_map old_values;
         id_value_type_map removed_values;
         id_type_set new_ids;
+        // ever time a new undo session is started, old_next_id will store previous _next_id;
         id_type old_next_id = 0;
         int64_t revision = 0;
     };
@@ -33,10 +58,11 @@ namespace chainbase {
     *
     *  Additionally, the constructor for value_type must take an allocator
     */
-    template<typename MultiIndexType>
-    class generic_index {
+    template<typename MultiIndexType> // MultiIndexType is boost::multi_index_container<ObjectType>
+    class generic_index { // consider it as a database table wrapper, = table + undo data/features
 
-        // internal class session
+        // internal session for generic_index
+        // TODO: what is the relashionship between undo_state and general_index::session
         class session {
         public:
             session(session &&mv)
@@ -92,7 +118,7 @@ namespace chainbase {
         typedef boost::interprocess::allocator<generic_index, segment_manager_type> allocator_type;
         typedef undo_state<value_type> undo_state_type;
 
-        generic_index(allocator <value_type> a)
+        generic_index(allocator<value_type> a)
                 : _stack(a), _indices(a), _size_of_value_type(sizeof(typename MultiIndexType::node_type)),
                   _size_of_this(sizeof(*this)) {}
 
@@ -211,8 +237,9 @@ namespace chainbase {
             // add back removed items
             for (auto &item: head.removed_values) {
                 bool ok = _indices.emplace(std::move(item.second)).second;
-                if (!ok) BOOST_THROW_EXCEPTION(std::logic_error(
-                            "Could not restore object, most likely a uniqueness constraint was violated"));
+                if (!ok)
+                    BOOST_THROW_EXCEPTION(std::logic_error(
+                                                  "Could not restore object, most likely a uniqueness constraint was violated"));
             }
 
             _stack.pop_back();
@@ -236,7 +263,7 @@ namespace chainbase {
           *
           *  This method does not change the state of the index, only the state of the undo buffer.
           */
-        void squash(){
+        void squash() {
             // An object's relationship to a state can be:
             // in new_ids            : new
             // in old_values (was=X) : upd(was=X)
@@ -280,22 +307,22 @@ namespace chainbase {
             // We can only be outside type A/AB (the nop path) if B is not nop, so it suffices to iterate through B's three containers.
 
 
-            if(!enabled()) return;
-            if(_stack.size() == 1){
+            if (!enabled()) return;
+            if (_stack.size() == 1) {
                 _stack.pop_front();
                 return;
             }
 
-            auto& state = _stack.back();
-            auto& prev_state = _stack[_stack.size() - 2];
+            auto &state = _stack.back();
+            auto &prev_state = _stack[_stack.size() - 2];
 
             // *+upd
-            for(const auto& item: state.old_values){
-                if(prev_state.new_ids.find(item.second.id) != prev_state.new_ids.end()){
+            for (const auto &item: state.old_values) {
+                if (prev_state.new_ids.find(item.second.id) != prev_state.new_ids.end()) {
                     // new + upd -> new, type A
                     continue;
                 }
-                if(prev_state.old_values.find(item.second.id) != prev_state.old_values.end()){
+                if (prev_state.old_values.find(item.second.id) != prev_state.old_values.end()) {
                     // upd(was=X) + upd(was=Y) -> upd(was=X), type A
                     continue;
                 }
@@ -307,37 +334,38 @@ namespace chainbase {
             }
 
             // *+new, but we assume the N/A cases don't happen, leaving type B nop+new -> new
-            for(auto id: state.new_ids)
+            for (auto id: state.new_ids)
                 prev_state.new_ids.insert(id);
 
             // *+del
-            for( auto& obj : state.removed_values )
-            {
-                if( prev_state.new_ids.find(obj.second.id) != prev_state.new_ids.end() )
-                {
+            for (auto &obj : state.removed_values) {
+                if (prev_state.new_ids.find(obj.second.id) != prev_state.new_ids.end()) {
                     // new + del -> nop (type C)
                     prev_state.new_ids.erase(obj.second.id);
                     continue;
                 }
                 auto it = prev_state.old_values.find(obj.second.id);
-                if( it != prev_state.old_values.end() )
-                {
+                if (it != prev_state.old_values.end()) {
                     // upd(was=X) + del(was=Y) -> del(was=X)
-                    prev_state.removed_values.emplace( std::move(*it) );
+                    prev_state.removed_values.emplace(std::move(*it));
                     prev_state.old_values.erase(obj.second.id);
                     continue;
                 }
                 // del + del -> N/A
-                assert( prev_state.removed_values.find( obj.second.id ) == prev_state.removed_values.end() );
+                assert(prev_state.removed_values.find(obj.second.id) == prev_state.removed_values.end());
                 // nop + del(was=Y) -> del(was=Y)
-                prev_state.removed_values.emplace( std::move(obj) ); //[obj.second->id] = std::move(obj.second);
+                prev_state.removed_values.emplace(std::move(obj)); //[obj.second->id] = std::move(obj.second);
             }
 
             _stack.pop_back();
             --_revision;
         }
+
     private:
         bool enabled() const { return _stack.size(); }
+
+        // on_create, on_modify, on_remove are invoked while index is created/modified/updated
+        // // and update the undo_state stack
 
         void on_create(const value_type &v) {
             if (!enabled()) return;
@@ -379,7 +407,8 @@ namespace chainbase {
             head.removed_values.emplace(std::pair<typename value_type::id_type, const value_type &>(v.id, v));
         }
 
-        boost::interprocess::deque<undo_state_type, allocator < undo_state_type>> _stack;
+        // consider it as database table
+        index_type _indices;
 
         /**
           *  Each new session increments the revision, a squash will decrement the revision by combining
@@ -387,11 +416,129 @@ namespace chainbase {
           *
           *  Commit will discard all revisions prior to the committed revision.
           */
+
+        // consider _stack and _revision fields as undo features for database table
+
+        // consider it as a cache list of new/updated/removed records of database table
+        boost::interprocess::deque<undo_state_type, allocator<undo_state_type>> _stack;
+        // consider it as a revision number of a database table
         int64_t _revision = 0;
+        // consider it as field to store auto-incremented id of a database table
         typename value_type::id_type _next_id = 0;
-        index_type _indices;
+
+        // below two fields are used to validate multi_index (database table)
         uint32_t _size_of_value_type = 0;
         uint32_t _size_of_this = 0;
+    };
+
+    class index_extension {
+    public:
+        index_extension() {}
+
+        ~index_extension() {}
+    };
+
+    typedef std::vector<std::shared_ptr<index_extension> > index_extensions;
+
+    class abstract_session {
+    public:
+        virtual ~abstract_session() {}
+
+        virtual void push() = 0;
+
+        virtual void squash() = 0;
+
+        virtual void undo() = 0;
+
+        virtual int64_t revision() const = 0;
+    };
+
+    template<typename SessionType>
+    class session_impl : public abstract_session {
+    public:
+        session_impl(SessionType &&s) : _session(std::move(s)) {}
+
+        virtual void push() override { _session.push(); }
+
+        virtual void squash() override { _session.override(); }
+
+        virtual int64_t revision() const override { return _session.revision(); }
+
+    private:
+        SessionType _session;
+    };
+
+    class abstract_index {
+    public:
+        abstract_index(void *i) : _idx_ptr(i) {}
+
+        virtual ~abstract_index() {}
+
+        virtual void set_revision(int64_t revision) = 0;
+
+        virtual std::unique_ptr<abstract_session> start_undo_session(bool enabled) = 0;
+
+        virtual int64_t revision() const = 0;
+
+        virtual void undo() const = 0;
+
+        virtual void undo_all() const = 0;
+
+        virtual void squash() const = 0;
+
+        virtual void commit(int64_t revision) const = 0;
+
+        virtual uint32_t type_id() const = 0;
+
+        virtual void remove_object(int64_t id) = 0;
+
+        void add_index_extension(std::shared_ptr<index_extension> ext) { _extensions.push_back(ext); }
+
+        const index_extensions& get_index_extensions()const  { return _extensions; }
+
+        void *get() const { return _idx_ptr; }
+
+    private:
+        void *_idx_ptr;
+        index_extensions _extensions;
+    };
+
+    template<typename BaseIndex>
+    class index_impl : public abstract_index {
+    public:
+        index_impl(BaseIndex &base) : abstract_index(&base), _base(base) {}
+
+        virtual std::unique_ptr<abstract_session> start_undo_session(bool enabled) override {
+            return std::unique_ptr<abstract_session>(
+                    new session_impl<typename BaseIndex::session>(_base.start_undo_session(enabled))
+            );
+        }
+
+        virtual void set_revision(int64_t revision) override { _base.set_revision(revision); }
+
+        virtual int64_t revision() const override { return _base.revision(); }
+
+        virtual void undo() const override { _base.undo(); }
+
+        virtual void squash() const override { _base.squash(); }
+
+        virtual void commit(int64_t revision) const override { _base.commit(revision); }
+
+        virtual void undo_all() const override { _base.undo_all(); }
+
+        virtual uint32_t type_id() const override { return BaseIndex::value_type::type_id; }
+
+        virtual void remove_object(int64_t id) override { return _base.remove_object(id); }
+
+    private:
+        BaseIndex &_base;
+
+    };
+
+    template<typename IndexType>
+    class index : public index_impl<IndexType> {
+    public:
+        index(IndexType &i) : index_impl<IndexType>(i) {}
     };
 
 }

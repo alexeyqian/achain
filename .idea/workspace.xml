@@ -12,49 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9d5d5f9-de9d-493c-8efa-61bc3cb9e2c1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/libraries/app/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chain/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chain/block_log.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chain/chain.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chain/chain.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chainbase/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chainbase/chainbase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chainbase/database.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chainbase/generic_index.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chainbase/object.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/chainbase/read_write_mutex_manager.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/protocol/base.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_app.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_chainbase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/chainbase/include/environment_check.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programs/achaind/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/programs/achaind/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/app/application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/app/application.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/app/application.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/app/application.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/chainbase/chainbase.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/chainbase.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/manifest/plugins.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/manifest/plugins.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/manifest/plugins.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/manifest/plugins.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/net/node.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/net/node.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/plugins/tags/tags_plugin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/plugins/tags/tags_plugin.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/plugins/tags/tags_plugin.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/plugins/tags/tags_plugin.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/authority.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/authority.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/base.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/base.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/block.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/block.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/block_header.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/block_header.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/config.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/config.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/transaction.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/transaction.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libraries/protocol/types.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/protocol/types.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/chainbase/chainbase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/chainbase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/chainbase/chainbase.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/include/chainbase.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/chainbase/database.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/include/database.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/chainbase/generic_index.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/include/generic_index.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/chainbase/object.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/include/object.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/chainbase/read_write_mutex_manager.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/chainbase/include/read_write_mutex_manager.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_chainbase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_chainbase.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,33 +44,34 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Makefile" value="2" />
-          <entry key="cpp" value="22" />
+          <entry key="cpp" value="23" />
+          <entry key="cstdint" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="h" value="1" />
-          <entry key="hpp" value="11" />
-          <entry key="txt" value="16" />
+          <entry key="h" value="2" />
+          <entry key="hpp" value="26" />
+          <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="16" />
-          <entry key="ObjectiveC" value="34" />
+          <entry key="CMakeLists.txt" value="20" />
+          <entry key="ObjectiveC" value="52" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="5069" />
+          <entry key="cpp" value="7492" />
           <entry key="gitignore" value="10" />
-          <entry key="hpp" value="7982" />
-          <entry key="txt" value="1084" />
+          <entry key="hpp" value="19000" />
+          <entry key="txt" value="1112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="1084" />
-          <entry key="Doxygen file" value="2" />
-          <entry key="ObjectiveC" value="13049" />
+          <entry key="CMakeLists.txt" value="1112" />
+          <entry key="Doxygen file" value="3" />
+          <entry key="ObjectiveC" value="26489" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -110,68 +80,137 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/chainbase/chainbase.hpp">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/chainbase.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-462">
-              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="218">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/database.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="371" selection-start-line="371" selection-end-line="371" />
               <folding>
-                <element signature="e#14#33#0" expanded="true" />
-                <element signature="e#1349#1361#0" expanded="true" />
-                <element signature="e#1552#1564#0" expanded="true" />
-                <element signature="e#1626#2191#1" />
-                <element signature="e#3653#3674#0" expanded="true" />
-                <element signature="e#3923#3935#0" expanded="true" />
+                <element signature="e#14#31#0" expanded="true" />
+                <element signature="e#286#449#0" expanded="true" />
+                <element signature="e#83#151#1" />
+                <element signature="e#2779#2838#0" />
+                <element signature="e#2332#2357#0" expanded="true" />
+                <element signature="e#2932#2957#0" expanded="true" />
+                <element signature="e#2932#2957#0" expanded="true" />
+                <element signature="e#4188#4231#0" expanded="true" />
+                <element signature="e#5010#5035#0" expanded="true" />
+                <element signature="e#5249#5318#0" expanded="true" />
+                <element signature="e#5777#5798#0" expanded="true" />
+                <element signature="e#6207#6276#0" expanded="true" />
+                <element signature="e#6217#6238#0" expanded="true" />
+                <element signature="e#4150#4175#0" expanded="true" />
+                <element signature="e#5576#5601#0" expanded="true" />
+                <element signature="e#5606#6249#0" />
+                <element signature="e#6259#6372#0" />
+                <element signature="e#9268#9317#0" expanded="true" />
+                <element signature="e#6413#7114#0" expanded="true" />
+                <element signature="e#10245#10288#0" expanded="true" />
+                <element signature="e#10241#10281#0" expanded="true" />
+                <element signature="e#10578#10599#0" expanded="true" />
+                <element signature="e#11229#11246#0" expanded="true" />
+                <element signature="e#11490#11540#0" expanded="true" />
+                <element signature="e#12014#12031#0" expanded="true" />
+                <element signature="e#12408#12481#0" expanded="true" />
+                <element signature="e#13104#13152#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/chainbase.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#251#2368#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/boost@1.60/1.60.0/include/boost/interprocess/managed_mapped_file.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="179" column="8" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/object.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+              <folding>
+                <element signature="e#390#402#0" expanded="true" />
+                <element signature="e#944#983#0" expanded="true" />
+                <element signature="e#1114#1126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/environment_check.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/read_write_mutex_manager.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <folding>
+                <element signature="e#14#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/generic_index.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/chainbase/generic_index.hpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="367">
+              <caret line="497" column="8" selection-start-line="497" selection-start-column="8" selection-end-line="497" selection-end-column="8" />
               <folding>
-                <element signature="e#109#130#0" expanded="true" />
-                <element signature="e#131#909#1" />
-                <element signature="e#605#617#0" expanded="true" />
-                <element signature="e#633#658#0" expanded="true" />
-                <element signature="e#1492#2593#1" />
-                <element signature="e#2444#2466#0" expanded="true" />
-                <element signature="e#3087#3106#0" expanded="true" />
-                <element signature="e#3570#3594#0" expanded="true" />
-                <element signature="e#3833#3857#0" expanded="true" />
-                <element signature="e#6619#6803#0" />
-                <element signature="e#6627#6662#0" />
-                <element signature="e#6627#6666#0" />
-                <element signature="e#6636#6689#0" />
-                <element signature="e#8367#8690#0" />
-                <element signature="e#8367#12476#0" />
-                <element signature="e#1018#1077#0" />
-                <element signature="e#1241#1305#0" />
-                <element signature="e#2604#2990#0" />
-                <element signature="e#1122#1397#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/test_chainbase.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-              <folding>
-                <element signature="e#72#91#0" expanded="true" />
+                <element signature="e#14#31#0" expanded="true" />
+                <element signature="e#679#691#0" expanded="true" />
+                <element signature="e#930#942#0" expanded="true" />
+                <element signature="e#1017#1052#0" expanded="true" />
+                <element signature="e#821#842#0" expanded="true" />
+                <element signature="e#1321#1333#0" expanded="true" />
+                <element signature="e#2112#2137#0" expanded="true" />
+                <element signature="e#2142#16517#1" />
+                <element signature="e#4667#4689#0" expanded="true" />
+                <element signature="e#9134#14619#0" />
+                <element signature="e#16524#16625#1" />
+                <element signature="e#16710#16942#1" />
+                <element signature="e#16984#17365#1" />
+                <element signature="e#19388#19508#1" />
               </folding>
             </state>
           </provider>
@@ -187,6 +226,15 @@
       <find>STEEMIT</find>
       <find>CHAINBASE_REQUIRE_READ_LOCK</find>
       <find>CHAINBASE_DEFAULT_CONSTRUCTOR</find>
+      <find>bip</find>
+      <find>shared_vector</find>
+      <find>allocator</find>
+      <find>shared_string</find>
+      <find>old_next_id</find>
+      <find>undo_state</find>
+      <find>_indices</find>
+      <find>unique_ptr</find>
+      <find>start_undo_session</find>
     </findStrings>
     <replaceStrings>
       <replace>ACHAIN</replace>
@@ -201,13 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/src/protocol/base.h" />
-        <option value="$PROJECT_DIR$/src/protocol/authority.h" />
-        <option value="$PROJECT_DIR$/src/protocol/base.cpp" />
-        <option value="$PROJECT_DIR$/src/protocol/base.hpp" />
-        <option value="$PROJECT_DIR$/src/protocol/authority.hpp" />
-        <option value="$PROJECT_DIR$/src/protocol/types.hpp" />
         <option value="$PROJECT_DIR$/src/protocol/block.hpp" />
         <option value="$PROJECT_DIR$/src/protocol/block_header.hpp" />
         <option value="$PROJECT_DIR$/src/protocol/transaction.hpp" />
@@ -239,11 +280,8 @@
         <option value="$PROJECT_DIR$/libraries/app/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/libraries/chain/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/libraries/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/libraries/chain/block_log.hpp" />
         <option value="$PROJECT_DIR$/tests/test_chainbase.cpp" />
-        <option value="$PROJECT_DIR$/tests/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/libraries/chainbase/chainbase.cpp" />
         <option value="$PROJECT_DIR$/libraries/chainbase/read_write_mutex_manager.hpp" />
         <option value="$PROJECT_DIR$/libraries/chainbase/database.hpp" />
         <option value="$PROJECT_DIR$/libraries/chainbase/oid.hpp" />
@@ -252,6 +290,16 @@
         <option value="$PROJECT_DIR$/libraries/chainbase/generic_index.hpp" />
         <option value="$PROJECT_DIR$/tests/test_generic_index.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/tests/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/object.hpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/environment_check.hpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/session.hpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/read_write_mutex_manager.hpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/chainbase.hpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/chainbase.cpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/database.hpp" />
+        <option value="$PROJECT_DIR$/libraries/chainbase/include/generic_index.hpp" />
       </list>
     </option>
   </component>
@@ -261,9 +309,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="140" />
+    <option name="y" value="46" />
+    <option name="width" value="1200" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -309,6 +359,13 @@
             <path>
               <item name="achain" type="b2602c69:ProjectViewProjectNode" />
               <item name="achain" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="chainbase" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="achain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="achain" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -327,6 +384,7 @@
       <recent name="$PROJECT_DIR$/programs/qtests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libraries/chainbase/include" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/libraries" />
       <recent name="$PROJECT_DIR$/src/crypto" />
@@ -378,18 +436,18 @@
       <workItem from="1530161464359" duration="344000" />
       <workItem from="1534348236624" duration="8721000" />
       <workItem from="1536980751193" duration="20561000" />
-      <workItem from="1542563298959" duration="37287000" />
+      <workItem from="1542563298959" duration="72253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81086000" />
+    <option name="totallyTimeSpent" value="116052000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16074313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15450644" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -401,7 +459,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26849315" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26746988" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="10" />
       <window_info anchor="right" id="Database" />
@@ -418,48 +476,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/crypto/src/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/crypto/src/aes.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/filedb/employee.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/filedb/employee_test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/study/cpp/mi.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/boost@1.60/1.60.0/include/boost/container/flat_map.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/protocol/authority.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -677,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -721,10 +730,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_generic_index.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_chainbase.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="e#72#91#0" expanded="true" />
+            <element signature="e#561#603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="66" />
+          <caret line="20" column="95" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/sys/_types/_int64_t.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/cstdint">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2845" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/session.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="28" selection-end-column="2" />
+          <folding>
+            <element signature="e#14#44#1" />
+            <element signature="e#224#246#0" expanded="true" />
+            <element signature="e#247#298#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/boost@1.60/1.60.0/include/boost/interprocess/detail/managed_memory_impl.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="224" column="20" selection-start-line="224" selection-start-column="20" selection-end-line="224" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/boost@1.60/1.60.0/include/boost/interprocess/managed_mapped_file.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="179" column="8" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/environment_check.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/object.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+          <folding>
+            <element signature="e#390#402#0" expanded="true" />
+            <element signature="e#944#983#0" expanded="true" />
+            <element signature="e#1114#1126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/read_write_mutex_manager.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="e#14#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -735,115 +843,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/chainbase/object.hpp">
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/chainbase.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding>
-            <element signature="e#9#21#0" expanded="true" />
-            <element signature="e#520#559#0" expanded="true" />
-            <element signature="e#777#789#0" expanded="true" />
-            <element signature="e#1086#1322#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/chainbase/read_write_mutex_manager.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="55" />
-          <folding>
-            <element signature="e#14#33#0" expanded="true" />
-            <element signature="e#922#1085#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="218">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/chainbase/chainbase.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="89" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#129#442#0" />
+            <element signature="e#251#2368#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/chainbase/database.hpp">
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/database.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="83" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
+        <state relative-caret-position="168">
+          <caret line="371" selection-start-line="371" selection-end-line="371" />
           <folding>
-            <element signature="e#423#448#0" expanded="true" />
+            <element signature="e#14#31#0" expanded="true" />
+            <element signature="e#286#449#0" expanded="true" />
+            <element signature="e#83#151#1" />
+            <element signature="e#2779#2838#0" />
+            <element signature="e#2332#2357#0" expanded="true" />
+            <element signature="e#2932#2957#0" expanded="true" />
+            <element signature="e#2932#2957#0" expanded="true" />
+            <element signature="e#4188#4231#0" expanded="true" />
+            <element signature="e#5010#5035#0" expanded="true" />
+            <element signature="e#5249#5318#0" expanded="true" />
+            <element signature="e#5777#5798#0" expanded="true" />
+            <element signature="e#6207#6276#0" expanded="true" />
+            <element signature="e#6217#6238#0" expanded="true" />
+            <element signature="e#4150#4175#0" expanded="true" />
+            <element signature="e#5576#5601#0" expanded="true" />
+            <element signature="e#5606#6249#0" />
+            <element signature="e#6259#6372#0" />
+            <element signature="e#9268#9317#0" expanded="true" />
+            <element signature="e#6413#7114#0" expanded="true" />
+            <element signature="e#10245#10288#0" expanded="true" />
+            <element signature="e#10241#10281#0" expanded="true" />
+            <element signature="e#10578#10599#0" expanded="true" />
+            <element signature="e#11229#11246#0" expanded="true" />
+            <element signature="e#11490#11540#0" expanded="true" />
+            <element signature="e#12014#12031#0" expanded="true" />
+            <element signature="e#12408#12481#0" expanded="true" />
+            <element signature="e#13104#13152#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/chainbase/generic_index.hpp">
+    <entry file="file://$PROJECT_DIR$/libraries/chainbase/include/generic_index.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="367">
+          <caret line="497" column="8" selection-start-line="497" selection-start-column="8" selection-end-line="497" selection-end-column="8" />
           <folding>
-            <element signature="e#109#130#0" expanded="true" />
-            <element signature="e#131#909#1" />
-            <element signature="e#605#617#0" expanded="true" />
-            <element signature="e#633#658#0" expanded="true" />
-            <element signature="e#1492#2593#1" />
-            <element signature="e#2444#2466#0" expanded="true" />
-            <element signature="e#3087#3106#0" expanded="true" />
-            <element signature="e#3570#3594#0" expanded="true" />
-            <element signature="e#3833#3857#0" expanded="true" />
-            <element signature="e#6619#6803#0" />
-            <element signature="e#6627#6662#0" />
-            <element signature="e#6627#6666#0" />
-            <element signature="e#6636#6689#0" />
-            <element signature="e#8367#8690#0" />
-            <element signature="e#8367#12476#0" />
-            <element signature="e#1018#1077#0" />
-            <element signature="e#1241#1305#0" />
-            <element signature="e#2604#2990#0" />
-            <element signature="e#1122#1397#0" />
+            <element signature="e#14#31#0" expanded="true" />
+            <element signature="e#679#691#0" expanded="true" />
+            <element signature="e#930#942#0" expanded="true" />
+            <element signature="e#1017#1052#0" expanded="true" />
+            <element signature="e#821#842#0" expanded="true" />
+            <element signature="e#1321#1333#0" expanded="true" />
+            <element signature="e#2112#2137#0" expanded="true" />
+            <element signature="e#2142#16517#1" />
+            <element signature="e#4667#4689#0" expanded="true" />
+            <element signature="e#9134#14619#0" />
+            <element signature="e#16524#16625#1" />
+            <element signature="e#16710#16942#1" />
+            <element signature="e#16984#17365#1" />
+            <element signature="e#19388#19508#1" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_generic_index.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_chainbase.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="e#72#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/chainbase/chainbase.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="e#14#33#0" expanded="true" />
-            <element signature="e#1349#1361#0" expanded="true" />
-            <element signature="e#1552#1564#0" expanded="true" />
-            <element signature="e#1626#2191#1" />
-            <element signature="e#3653#3674#0" expanded="true" />
-            <element signature="e#3923#3935#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
