@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /Users/xiaofeiqian/achain/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"dev\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,6 +157,201 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named project_secp256k1
+
+# Build rule for target.
+project_secp256k1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 project_secp256k1
+.PHONY : project_secp256k1
+
+# fast build rule for target.
+project_secp256k1/fast:
+	$(MAKE) -f libraries/fc/CMakeFiles/project_secp256k1.dir/build.make libraries/fc/CMakeFiles/project_secp256k1.dir/build
+.PHONY : project_secp256k1/fast
+
+#=============================================================================
+# Target rules for targets named fc
+
+# Build rule for target.
+fc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fc
+.PHONY : fc
+
+# fast build rule for target.
+fc/fast:
+	$(MAKE) -f libraries/fc/CMakeFiles/fc.dir/build.make libraries/fc/CMakeFiles/fc.dir/build
+.PHONY : fc/fast
+
+#=============================================================================
+# Target rules for targets named equihash
+
+# Build rule for target.
+equihash: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 equihash
+.PHONY : equihash
+
+# fast build rule for target.
+equihash/fast:
+	$(MAKE) -f libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/build.make libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/build
+.PHONY : equihash/fast
+
+#=============================================================================
+# Target rules for targets named log_test
+
+# Build rule for target.
+log_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 log_test
+.PHONY : log_test
+
+# fast build rule for target.
+log_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/log_test.dir/build.make libraries/fc/tests/CMakeFiles/log_test.dir/build
+.PHONY : log_test/fast
+
+#=============================================================================
+# Target rules for targets named ecc_test
+
+# Build rule for target.
+ecc_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ecc_test
+.PHONY : ecc_test
+
+# fast build rule for target.
+ecc_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/ecc_test.dir/build.make libraries/fc/tests/CMakeFiles/ecc_test.dir/build
+.PHONY : ecc_test/fast
+
+#=============================================================================
+# Target rules for targets named blinding_test
+
+# Build rule for target.
+blinding_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blinding_test
+.PHONY : blinding_test
+
+# fast build rule for target.
+blinding_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/blinding_test.dir/build.make libraries/fc/tests/CMakeFiles/blinding_test.dir/build
+.PHONY : blinding_test/fast
+
+#=============================================================================
+# Target rules for targets named hmac_test
+
+# Build rule for target.
+hmac_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hmac_test
+.PHONY : hmac_test
+
+# fast build rule for target.
+hmac_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/hmac_test.dir/build.make libraries/fc/tests/CMakeFiles/hmac_test.dir/build
+.PHONY : hmac_test/fast
+
+#=============================================================================
+# Target rules for targets named bloom_test
+
+# Build rule for target.
+bloom_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bloom_test
+.PHONY : bloom_test
+
+# fast build rule for target.
+bloom_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/bloom_test.dir/build.make libraries/fc/tests/CMakeFiles/bloom_test.dir/build
+.PHONY : bloom_test/fast
+
+#=============================================================================
+# Target rules for targets named all_tests
+
+# Build rule for target.
+all_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 all_tests
+.PHONY : all_tests
+
+# fast build rule for target.
+all_tests/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/all_tests.dir/build.make libraries/fc/tests/CMakeFiles/all_tests.dir/build
+.PHONY : all_tests/fast
+
+#=============================================================================
+# Target rules for targets named real128_test
+
+# Build rule for target.
+real128_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 real128_test
+.PHONY : real128_test
+
+# fast build rule for target.
+real128_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/real128_test.dir/build.make libraries/fc/tests/CMakeFiles/real128_test.dir/build
+.PHONY : real128_test/fast
+
+#=============================================================================
+# Target rules for targets named bip_lock
+
+# Build rule for target.
+bip_lock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bip_lock
+.PHONY : bip_lock
+
+# fast build rule for target.
+bip_lock/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/bip_lock.dir/build.make libraries/fc/tests/CMakeFiles/bip_lock.dir/build
+.PHONY : bip_lock/fast
+
+#=============================================================================
+# Target rules for targets named ntp_test
+
+# Build rule for target.
+ntp_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ntp_test
+.PHONY : ntp_test
+
+# fast build rule for target.
+ntp_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/ntp_test.dir/build.make libraries/fc/tests/CMakeFiles/ntp_test.dir/build
+.PHONY : ntp_test/fast
+
+#=============================================================================
+# Target rules for targets named task_cancel_test
+
+# Build rule for target.
+task_cancel_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 task_cancel_test
+.PHONY : task_cancel_test
+
+# fast build rule for target.
+task_cancel_test/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/task_cancel_test.dir/build.make libraries/fc/tests/CMakeFiles/task_cancel_test.dir/build
+.PHONY : task_cancel_test/fast
+
+#=============================================================================
+# Target rules for targets named blind
+
+# Build rule for target.
+blind: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blind
+.PHONY : blind
+
+# fast build rule for target.
+blind/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/blind.dir/build.make libraries/fc/tests/CMakeFiles/blind.dir/build
+.PHONY : blind/fast
+
+#=============================================================================
+# Target rules for targets named api
+
+# Build rule for target.
+api: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 api
+.PHONY : api
+
+# fast build rule for target.
+api/fast:
+	$(MAKE) -f libraries/fc/tests/CMakeFiles/api.dir/build.make libraries/fc/tests/CMakeFiles/api.dir/build
+.PHONY : api/fast
+
+#=============================================================================
 # Target rules for targets named chainbase
 
 # Build rule for target.
@@ -122,6 +363,19 @@ chainbase: cmake_check_build_system
 chainbase/fast:
 	$(MAKE) -f libraries/chainbase/CMakeFiles/chainbase.dir/build.make libraries/chainbase/CMakeFiles/chainbase.dir/build
 .PHONY : chainbase/fast
+
+#=============================================================================
+# Target rules for targets named achain_protocol
+
+# Build rule for target.
+achain_protocol: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 achain_protocol
+.PHONY : achain_protocol
+
+# fast build rule for target.
+achain_protocol/fast:
+	$(MAKE) -f libraries/protocol/CMakeFiles/achain_protocol.dir/build.make libraries/protocol/CMakeFiles/achain_protocol.dir/build
+.PHONY : achain_protocol/fast
 
 #=============================================================================
 # Target rules for targets named chain
@@ -233,9 +487,29 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... project_secp256k1"
+	@echo "... fc"
+	@echo "... equihash"
+	@echo "... log_test"
+	@echo "... ecc_test"
+	@echo "... blinding_test"
+	@echo "... hmac_test"
+	@echo "... bloom_test"
+	@echo "... all_tests"
+	@echo "... real128_test"
+	@echo "... bip_lock"
+	@echo "... ntp_test"
+	@echo "... task_cancel_test"
+	@echo "... blind"
+	@echo "... api"
 	@echo "... chainbase"
+	@echo "... achain_protocol"
 	@echo "... chain"
 	@echo "... app"
 	@echo "... achaind"

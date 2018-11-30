@@ -14,6 +14,48 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/libpthread.dylib
+
+//Build websocketpp examples.
+BUILD_EXAMPLES:BOOL=OFF
+
+//Build websocketpp tests.
+BUILD_TESTS:BOOL=OFF
+
+//Path to a file.
+BZIP2_INCLUDE_DIR:PATH=/opt/local/include
+
+//Path to a library.
+BZIP2_LIBRARY_DEBUG:FILEPATH=BZIP2_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+BZIP2_LIBRARY_RELEASE:FILEPATH=/usr/lib/libbz2.dylib
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_chrono-mt.a
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_chrono-mt.a
+
+//Boost context library (debug)
+Boost_CONTEXT_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_context-mt.a
+
+//Boost context library (release)
+Boost_CONTEXT_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_context-mt.a
+
+//Boost coroutine library (debug)
+Boost_COROUTINE_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_coroutine-mt.a
+
+//Boost coroutine library (release)
+Boost_COROUTINE_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_coroutine-mt.a
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_date_time-mt.a
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_date_time-mt.a
+
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
 
@@ -26,11 +68,44 @@ Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/li
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=/usr/local/Cellar/boost@1.60/1.60.0/include
 
+//Boost iostreams library (debug)
+Boost_IOSTREAMS_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_iostreams-mt.a
+
+//Boost iostreams library (release)
+Boost_IOSTREAMS_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_iostreams-mt.a
+
+//Boost library directory
+Boost_LIBRARY_DIR:PATH=/usr/local/Cellar/boost@1.60/1.60.0/lib
+
 //Boost library directory DEBUG
 Boost_LIBRARY_DIR_DEBUG:PATH=/usr/local/Cellar/boost@1.60/1.60.0/lib
 
 //Boost library directory RELEASE
 Boost_LIBRARY_DIR_RELEASE:PATH=/usr/local/Cellar/boost@1.60/1.60.0/lib
+
+//Boost locale library (debug)
+Boost_LOCALE_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_locale-mt.a
+
+//Boost locale library (release)
+Boost_LOCALE_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_locale-mt.a
+
+//Boost program_options library (debug)
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_program_options-mt.a
+
+//Boost program_options library (release)
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_program_options-mt.a
+
+//Boost serialization library (debug)
+Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_serialization-mt.a
+
+//Boost serialization library (release)
+Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_serialization-mt.a
+
+//Boost signals library (debug)
+Boost_SIGNALS_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_signals-mt.a
+
+//Boost signals library (release)
+Boost_SIGNALS_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_signals-mt.a
 
 //Boost system library (debug)
 Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_system-mt.a
@@ -44,6 +119,12 @@ Boost_TEST_LIBRARY_DEBUG:FILEPATH=Boost_TEST_LIBRARY_DEBUG-NOTFOUND
 //Boost test library (release)
 Boost_TEST_LIBRARY_RELEASE:FILEPATH=Boost_TEST_LIBRARY_RELEASE-NOTFOUND
 
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_thread-mt.a
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_thread-mt.a
+
 //Boost unit_test_framework library (debug)
 Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG:FILEPATH=/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_unit_test_framework-mt.a
 
@@ -56,12 +137,15 @@ Boost_USE_STATIC_LIBS:STRING=ON
 //Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 
-//Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
-// CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
+
+//Configurations
+CMAKE_CONFIGURATION_TYPES:STRING=Release;RelWithDebInfo;Debug
 
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
@@ -218,8 +302,77 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a library.
+CURSES_CURSES_LIBRARY:FILEPATH=/usr/lib/libcurses.dylib
+
+//Path to a library.
+CURSES_FORM_LIBRARY:FILEPATH=/usr/lib/libform.dylib
+
+//Path to a file.
+CURSES_INCLUDE_PATH:PATH=/opt/local/include
+
+//Path to a library.
+CURSES_NCURSES_LIBRARY:FILEPATH=/usr/lib/libncurses.dylib
+
+//secp256k1 or openssl or mixed
+ECC_IMPL:STRING=secp256k1
+
+//Build websocketpp with CPP11 features enabled.
+ENABLE_CPP11:BOOL=ON
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/local/bin/git
+
 //The directory containing a CMake configuration file for Gperftools.
 Gperftools_DIR:PATH=Gperftools_DIR-NOTFOUND
+
+//Installation directory for CMake files
+INSTALL_CMAKE_DIR:PATH=lib/cmake/websocketpp
+
+//Installation directory for header files
+INSTALL_INCLUDE_DIR:PATH=include
+
+//Log long API calls over websocket (ON OR OFF)
+LOG_LONG_API:BOOL=ON
+
+//Max API execution time in ms
+LOG_LONG_API_MAX_MS:STRING=1000
+
+//API execution time in ms at which to warn
+LOG_LONG_API_WARN_MS:STRING=750
+
+//Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/opt/local/lib/libcrypto.a
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/opt/local/include
+
+//Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/opt/local/lib/libssl.a
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
+
+//Path to a file.
+Readline_INCLUDE_DIR:PATH=/usr/local/include
+
+//Path to a library.
+Readline_LIBRARY:FILEPATH=/usr/local/lib/libreadline.dylib
+
+//Path to a file.
+Readline_ROOT_DIR:PATH=/usr/local
+
+//OFF
+UNITY_BUILD:BOOL=OFF
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/opt/local/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/libz.dylib
 
 //Value Computed by CMake
 achain_BINARY_DIR:STATIC=/Users/xiaofeiqian/achain/cmake-build-debug
@@ -233,6 +386,9 @@ achain_app_LIB_DEPENDS:STATIC=
 //Dependencies for target
 achain_chain_LIB_DEPENDS:STATIC=
 
+//Dependencies for the target
+achain_protocol_LIB_DEPENDS:STATIC=general;fc;
+
 //Dependencies for target
 app_LIB_DEPENDS:STATIC=
 
@@ -242,11 +398,56 @@ chain_LIB_DEPENDS:STATIC=
 //Dependencies for target
 chainbase_LIB_DEPENDS:STATIC=
 
+//Dependencies for target
+equihash_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+fc_BINARY_DIR:STATIC=/Users/xiaofeiqian/achain/cmake-build-debug/libraries/fc
+
+//Dependencies for the target
+fc_LIB_DEPENDS:STATIC=general;-L/usr/local/lib;general;equihash;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_thread-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_date_time-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_system-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_filesystem-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_program_options-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_signals-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_serialization-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_chrono-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_unit_test_framework-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_context-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_locale-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_iostreams-mt.a;general;/usr/local/Cellar/boost@1.60/1.60.0/lib/libboost_coroutine-mt.a;general;/usr/lib/libpthread.dylib;general;/opt/local/lib/libssl.a;general;/opt/local/lib/libcrypto.a;general;/usr/lib/libz.dylib;general;/usr/lib/libbz2.dylib;general;/usr/local/lib/libreadline.dylib;general;/usr/lib/libcurses.dylib;general;secp256k1;
+
+//Value Computed by CMake
+fc_SOURCE_DIR:STATIC=/Users/xiaofeiqian/achain/libraries/fc
+
+//Dependencies for target
+protocol_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+websocketpp_BINARY_DIR:STATIC=/Users/xiaofeiqian/achain/cmake-build-debug/libraries/fc/vendor/websocketpp
+
+//Value Computed by CMake
+websocketpp_SOURCE_DIR:STATIC=/Users/xiaofeiqian/achain/libraries/fc/vendor/websocketpp
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BZIP2_INCLUDE_DIR
+BZIP2_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_LIBRARY_DEBUG
+BZIP2_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BZIP2_LIBRARY_RELEASE
+BZIP2_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Have symbol BZ2_bzCompressInit
+BZIP2_NEED_PREFIX:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CONTEXT_LIBRARY_DEBUG
+Boost_CONTEXT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CONTEXT_LIBRARY_RELEASE
+Boost_CONTEXT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_COROUTINE_LIBRARY_DEBUG
+Boost_COROUTINE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_COROUTINE_LIBRARY_RELEASE
+Boost_COROUTINE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
@@ -255,10 +456,32 @@ Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
 Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_DEBUG
+Boost_IOSTREAMS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_RELEASE
+Boost_IOSTREAMS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR
+Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
 Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
 Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LOCALE_LIBRARY_DEBUG
+Boost_LOCALE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LOCALE_LIBRARY_RELEASE
+Boost_LOCALE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
+Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
+Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_DEBUG
+Boost_SIGNALS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_RELEASE
+Boost_SIGNALS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
 Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
@@ -267,6 +490,10 @@ Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 Boost_TEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_TEST_LIBRARY_RELEASE
 Boost_TEST_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG
 Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE
@@ -333,6 +560,8 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+//Generator instance identifier.
+CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -359,7 +588,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -400,12 +629,54 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_CURSES_LIBRARY
+CURSES_CURSES_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_FORM_LIBRARY
+CURSES_FORM_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_INCLUDE_PATH
+CURSES_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_NCURSES_LIBRARY
+CURSES_NCURSES_LIBRARY-ADVANCED:INTERNAL=1
+//Details about finding BZip2
+FIND_PACKAGE_MESSAGE_DETAILS_BZip2:INTERNAL=[/usr/lib/libbz2.dylib][/opt/local/include][v1.0.6()]
+//Details about finding Curses
+FIND_PACKAGE_MESSAGE_DETAILS_Curses:INTERNAL=[/usr/lib/libcurses.dylib][/opt/local/include][v()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/opt/local/lib/libcrypto.a][/opt/local/include][v1.0.2l()]
+//Details about finding Readline
+FIND_PACKAGE_MESSAGE_DETAILS_Readline:INTERNAL=[/usr/local/include][/usr/local/lib/libreadline.dylib][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/libz.dylib][/opt/local/include][v1.2.11()]
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
+OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
+OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Readline_INCLUDE_DIR
+Readline_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Readline_LIBRARY
+Readline_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Readline_ROOT_DIR
+Readline_ROOT_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=filesystem;system;test;unit_test_framework
+_Boost_COMPONENTS_SEARCHED:INTERNAL=chrono;context;coroutine;date_time;filesystem;iostreams;locale;program_options;serialization;signals;system;test;thread;unit_test_framework
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/include
 //Last used Boost_LIBRARY_DIR_DEBUG value.
 _Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/lib
+//Last used Boost_LIBRARY_DIR value.
+_Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/lib
 //Last used Boost_LIBRARY_DIR_RELEASE value.
 _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/lib
 //Last used Boost_NAMESPACE value.
@@ -414,4 +685,29 @@ _Boost_NAMESPACE_LAST:INTERNAL=boost
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 //Last used Boost_USE_STATIC_LIBS value.
 _Boost_USE_STATIC_LIBS_LAST:INTERNAL=ON
+_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS_I:INTERNAL=
+_OPENSSL_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=
+_OPENSSL_INCLUDEDIR:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=
+_OPENSSL_LIBS:INTERNAL=
+_OPENSSL_LIBS_L:INTERNAL=
+_OPENSSL_LIBS_OTHER:INTERNAL=
+_OPENSSL_LIBS_PATHS:INTERNAL=
+_OPENSSL_PREFIX:INTERNAL=
+_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBS:INTERNAL=
+_OPENSSL_STATIC_LIBS_L:INTERNAL=
+_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=
+_OPENSSL_openssl_INCLUDEDIR:INTERNAL=
+_OPENSSL_openssl_LIBDIR:INTERNAL=
+_OPENSSL_openssl_PREFIX:INTERNAL=
+_OPENSSL_openssl_VERSION:INTERNAL=
+__pkg_config_checked__OPENSSL:INTERNAL=1
 

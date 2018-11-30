@@ -39,6 +39,12 @@ link_directories("/usr/local/Cellar/boost@1.60/1.60.0/lib")
 message(">> Boost include dirs: ${Boost_INCLUDE_DIRS}")
 message(">> Boost library dirs: ${Boost_LIBRARY_DIRS}")
 
+list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules" )
+list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules" )
+list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/GitVersionGen" )
+include( GetGitRevisionDescription )
+get_git_head_revision( GIT_REFSPEC GIT_SHA2 )
+
 add_subdirectory(libraries)
 add_subdirectory(programs)
 add_subdirectory(tests)
