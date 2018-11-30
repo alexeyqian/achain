@@ -1,8 +1,1 @@
-file(GLOB HEADERS "*.hpp")
-
-
-add_library(
-
-
-        ${HEADERS}
-)
+add_library(protocol protocol.cpp)
