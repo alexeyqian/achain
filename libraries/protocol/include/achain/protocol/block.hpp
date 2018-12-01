@@ -1,7 +1,10 @@
 #pragma once
+
 #include <vector>
 
-#include "types.hpp"
+#include <achain/protocol/types.hpp>
+#include <achain/protocol/block_header.hpp>
+#include <achain/protocol/transaction.hpp>
 
 namespace achain{namespace protocol{
     struct signed_block: public signed_block_header{

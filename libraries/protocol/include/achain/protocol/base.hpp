@@ -1,6 +1,12 @@
 #pragma once
 
 #include <vector>
+#include <boost/container/flat_set.hpp>
+
+#include <achain/protocol/types.hpp>
+#include <achain/protocol/authority.hpp>
+#include <achain/protocol/version.hpp>
+
 namespace achain {namespace protocol {
     struct base_operation{
         void get_required_authorities(std::vector<authority>&) const{}
@@ -16,4 +22,12 @@ namespace achain {namespace protocol {
         bool is_virtual() const {return true;}
         void validate() const {FC_ASSERT(false, "This is a virtual operation");}
     };
+
+    typedef static_variant<void_t, version, hardfork_version_vote> block_header_extensions;
+    typedef static_variant<void_t> future_extensions;
+    typedef boost::flat_set<block_header_extensions> block_header_extensions_type;
+    typedef boost::flat_set<future_extensions> extensions_type;
 }}
+
+FC_REFLECT_TYPENAME( achain::protocol::block_header_extensions )
+FC_REFLECT_TYPENAME( achain::protocol::future_extensions )

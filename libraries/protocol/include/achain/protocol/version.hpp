@@ -63,14 +63,14 @@ namespace achain{ namespace protocol {
 
 namespace fc{
     class variant;
-    void to_variant(const achain::protocal::version& v, variant& var);
-    void from_variant(const variant& var, achain::protocal::version& v);
+    void to_variant(const achain::protocol::version& v, variant& var);
+    void from_variant(const variant& var, achain::protocol::version& v);
 
     void to_variant( const achain::protocol::hardfork_version& hv, variant& var );
     void from_variant( const variant& var, achain::protocol::hardfork_version& hv );
 }
 
 #include <fc/reflect/reflect.hpp>
-FC_REFLECT(achain::protocal::version, (v_num));
-FC_REFLECT_DERIVED(achain::protocal::hardfork_version, (achain::protocal::version), )
-FC_REFLECT(achain::protocal::hardfork_version_vote, (hf_version)(hf_time) )
+FC_REFLECT(achain::protocol::version, (v_num));
+FC_REFLECT_DERIVED(achain::protocol::hardfork_version, (achain::protocol::version), )
+FC_REFLECT(achain::protocol::hardfork_version_vote, (hf_version)(hf_time) )
