@@ -22,7 +22,7 @@ namespace achain{namespace protocol{
         void sign(const fc::ecc::private_key& signer);
         bool validate_signee(const fc::ecc::public_key& expected_signee) const;
 
-        signature_type withness_signature;
+        signature_type witness_signature;
     };
 }}
 
