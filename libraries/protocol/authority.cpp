@@ -1,6 +1,12 @@
+#include <string>
+#include <vector>
 #include <achain/protocol/authority.hpp>
 
 namespace achain { namespace protocol {
+
+    using std::string;
+    using std::vector;
+    
     void authority::add_authority(const public_key_type& k, weight_type w){
         key_auths[k] = w;
     }
@@ -10,7 +16,7 @@ namespace achain { namespace protocol {
     }
 
     vector<public_key_type> authority::get_keys() const{
-        vector<public_key_type> result;
+        std::vector<public_key_type> result;
         result.reserve(key_auths.size());
         for(const auto& k: key_auths)
             result.push_back(k.first);
@@ -25,7 +31,7 @@ namespace achain { namespace protocol {
         return auth_weights < weight_threshold;
     }
 
-    uint32_t authorit::num_auths() const{
+    uint32_t authority::num_auths() const{
         return account_auths.size() + key_auths.size();
     }
 
@@ -45,17 +51,17 @@ namespace achain { namespace protocol {
             (a.key_auths == b.key_auths);
     }
 
-    bool is_valid_account_name( const string& name )
+    bool is_valid_account_name( const std::string& name )
     {
     #if ACHAIN_MIN_ACCOUNT_NAME_LENGTH < 3
     #error This is_valid_account_name implementation implicitly enforces minimum name length of 3.
     #endif
 
     const size_t len = name.size();
-    if( len < STEEMIT_MIN_ACCOUNT_NAME_LENGTH )
+    if( len < ACHAIN_MIN_ACCOUNT_NAME_LENGTH )
         return false;
 
-    if( len > STEEMIT_MAX_ACCOUNT_NAME_LENGTH )
+    if( len > ACHAIN_MAX_ACCOUNT_NAME_LENGTH )
         return false;
 
     size_t begin = 0;

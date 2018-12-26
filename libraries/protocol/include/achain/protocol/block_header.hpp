@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <achain/protocol/base.hpp>
+#include <string>
 
 namespace achain{namespace protocol{
     struct block_header{
@@ -27,4 +27,4 @@ namespace achain{namespace protocol{
 }}
 
 FC_REFLECT( achain::protocol::block_header, (previous)(timestamp)(witness)(transaction_merkle_root)(extensions) )
-FC_REFLECT_DERIVED( achain::protocol::signed_block_header, (steemit::protocol::block_header), (witness_signature) )
+FC_REFLECT_DERIVED( achain::protocol::signed_block_header, (achain::protocol::block_header), (witness_signature) )

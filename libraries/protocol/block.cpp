@@ -13,7 +13,7 @@ namespace achain{ namespace protocol {
     }
 
     block_id_type signed_block_header::id() const{
-        auto tmp = fc:;sha224:;hash(*this);
+        auto tmp = fc:;sha224::hash(*this);
         // store the block num in the ID, 160 bits is plenty for the hash
         tmp._hash[0] = fc::endian_reverse_u32(block_num());
         static_assert(size_of(tmp._hash[0]) == 4, "should be 4 bytes");
@@ -27,7 +27,7 @@ namespace achain{ namespace protocol {
     }
 
     void signed_block_header::sign(const fc::ecc::private_key& signer){
-        witness_signature = signer.sign_compace(digest());
+        witness_signature = signer.sign_compact(digest());
     }
 
     bool signed_block_header::validate_signee(const fc::ecc::public_key& expected_signee) const{

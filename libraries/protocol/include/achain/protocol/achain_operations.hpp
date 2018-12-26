@@ -1,13 +1,20 @@
 #pragma once
 
-#include <steemit/protocol/base.hpp>
-#include <steemit/protocol/block_header.hpp>
-#include <steemit/protocol/asset.hpp>
+#include <achain/protocol/base.hpp>
+#include <achain/protocol/block_header.hpp>
+#include <achain/protocol/asset.hpp>
 
 #include <fc/utf8.hpp>
 #include <fc/crypto/equihash.hpp>
+#include <string>
+#include <vector>
 
 namespace achain{ namespace protocol {
+    using std::string;
+    using std::vector;
+    using fc::optional;
+    using fc::static_variant;
+
     inline void validate_account_name(const string& name){
         FC_ASSERT(is_valid_account_name (name), "Account name ${n} is invalide", ("n", name));
     }
@@ -19,7 +26,7 @@ namespace achain{ namespace protocol {
 
     struct account_create_opration :public base_operation{
         asset fee;
-        acount_name_type creator;
+        account_name_type creator;
         account_name_type new_account_name;
         authority owner;
         authority active;

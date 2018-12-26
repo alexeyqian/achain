@@ -124,7 +124,7 @@ libraries/fc/preinstall: libraries/fc/tests/preinstall
 libraries/fc/CMakeFiles/project_secp256k1.dir/all:
 	$(MAKE) -f libraries/fc/CMakeFiles/project_secp256k1.dir/build.make libraries/fc/CMakeFiles/project_secp256k1.dir/depend
 	$(MAKE) -f libraries/fc/CMakeFiles/project_secp256k1.dir/build.make libraries/fc/CMakeFiles/project_secp256k1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=86,87,88,89,90,91 "Built target project_secp256k1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=87,88,89,90,91 "Built target project_secp256k1"
 .PHONY : libraries/fc/CMakeFiles/project_secp256k1.dir/all
 
 # Include target in all.
@@ -134,7 +134,7 @@ all: libraries/fc/CMakeFiles/project_secp256k1.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/CMakeFiles/project_secp256k1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/CMakeFiles/project_secp256k1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/CMakeFiles/project_secp256k1.dir/rule
@@ -162,7 +162,7 @@ libraries/fc/CMakeFiles/fc.dir/all: libraries/fc/CMakeFiles/project_secp256k1.di
 libraries/fc/CMakeFiles/fc.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/CMakeFiles/fc.dir/build.make libraries/fc/CMakeFiles/fc.dir/depend
 	$(MAKE) -f libraries/fc/CMakeFiles/fc.dir/build.make libraries/fc/CMakeFiles/fc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80 "Built target fc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81 "Built target fc"
 .PHONY : libraries/fc/CMakeFiles/fc.dir/all
 
 # Include target in all.
@@ -172,7 +172,7 @@ all: libraries/fc/CMakeFiles/fc.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/CMakeFiles/fc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 61
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 57
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/CMakeFiles/fc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/CMakeFiles/fc.dir/rule
@@ -253,7 +253,7 @@ libraries/fc/vendor/equihash/preinstall:
 libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all:
 	$(MAKE) -f libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/build.make libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/depend
 	$(MAKE) -f libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/build.make libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=26,27 "Built target equihash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=30 "Built target equihash"
 .PHONY : libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 
 # Include target in all.
@@ -263,7 +263,7 @@ all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/rule
@@ -332,7 +332,7 @@ libraries/fc/tests/CMakeFiles/log_test.dir/all: libraries/fc/CMakeFiles/fc.dir/a
 libraries/fc/tests/CMakeFiles/log_test.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/log_test.dir/build.make libraries/fc/tests/CMakeFiles/log_test.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/log_test.dir/build.make libraries/fc/tests/CMakeFiles/log_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=82 "Built target log_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=83 "Built target log_test"
 .PHONY : libraries/fc/tests/CMakeFiles/log_test.dir/all
 
 # Include target in all.
@@ -342,7 +342,7 @@ all: libraries/fc/tests/CMakeFiles/log_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/log_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/log_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/log_test.dir/rule
@@ -371,7 +371,7 @@ libraries/fc/tests/CMakeFiles/ecc_test.dir/all: libraries/fc/CMakeFiles/fc.dir/a
 libraries/fc/tests/CMakeFiles/ecc_test.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/ecc_test.dir/build.make libraries/fc/tests/CMakeFiles/ecc_test.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/ecc_test.dir/build.make libraries/fc/tests/CMakeFiles/ecc_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=25 "Built target ecc_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=29 "Built target ecc_test"
 .PHONY : libraries/fc/tests/CMakeFiles/ecc_test.dir/all
 
 # Include target in all.
@@ -381,7 +381,7 @@ all: libraries/fc/tests/CMakeFiles/ecc_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/ecc_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/ecc_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/ecc_test.dir/rule
@@ -410,7 +410,7 @@ libraries/fc/tests/CMakeFiles/blinding_test.dir/all: libraries/fc/CMakeFiles/fc.
 libraries/fc/tests/CMakeFiles/blinding_test.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/blinding_test.dir/build.make libraries/fc/tests/CMakeFiles/blinding_test.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/blinding_test.dir/build.make libraries/fc/tests/CMakeFiles/blinding_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=19 "Built target blinding_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=23 "Built target blinding_test"
 .PHONY : libraries/fc/tests/CMakeFiles/blinding_test.dir/all
 
 # Include target in all.
@@ -420,7 +420,7 @@ all: libraries/fc/tests/CMakeFiles/blinding_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/blinding_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/blinding_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/blinding_test.dir/rule
@@ -449,7 +449,7 @@ libraries/fc/tests/CMakeFiles/hmac_test.dir/all: libraries/fc/CMakeFiles/fc.dir/
 libraries/fc/tests/CMakeFiles/hmac_test.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/hmac_test.dir/build.make libraries/fc/tests/CMakeFiles/hmac_test.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/hmac_test.dir/build.make libraries/fc/tests/CMakeFiles/hmac_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=81 "Built target hmac_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=82 "Built target hmac_test"
 .PHONY : libraries/fc/tests/CMakeFiles/hmac_test.dir/all
 
 # Include target in all.
@@ -459,7 +459,7 @@ all: libraries/fc/tests/CMakeFiles/hmac_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/hmac_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/hmac_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/hmac_test.dir/rule
@@ -488,7 +488,7 @@ libraries/fc/tests/CMakeFiles/bloom_test.dir/all: libraries/fc/CMakeFiles/fc.dir
 libraries/fc/tests/CMakeFiles/bloom_test.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/bloom_test.dir/build.make libraries/fc/tests/CMakeFiles/bloom_test.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/bloom_test.dir/build.make libraries/fc/tests/CMakeFiles/bloom_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target bloom_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target bloom_test"
 .PHONY : libraries/fc/tests/CMakeFiles/bloom_test.dir/all
 
 # Include target in all.
@@ -498,7 +498,7 @@ all: libraries/fc/tests/CMakeFiles/bloom_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/bloom_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/bloom_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/bloom_test.dir/rule
@@ -527,7 +527,7 @@ libraries/fc/tests/CMakeFiles/all_tests.dir/all: libraries/fc/CMakeFiles/fc.dir/
 libraries/fc/tests/CMakeFiles/all_tests.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/all_tests.dir/build.make libraries/fc/tests/CMakeFiles/all_tests.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/all_tests.dir/build.make libraries/fc/tests/CMakeFiles/all_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target all_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17 "Built target all_tests"
 .PHONY : libraries/fc/tests/CMakeFiles/all_tests.dir/all
 
 # Include target in all.
@@ -537,7 +537,7 @@ all: libraries/fc/tests/CMakeFiles/all_tests.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/all_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 71
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 67
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/all_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/all_tests.dir/rule
@@ -576,7 +576,7 @@ all: libraries/fc/tests/CMakeFiles/real128_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/real128_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/real128_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/real128_test.dir/rule
@@ -605,7 +605,7 @@ libraries/fc/tests/CMakeFiles/bip_lock.dir/all: libraries/fc/CMakeFiles/fc.dir/a
 libraries/fc/tests/CMakeFiles/bip_lock.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/bip_lock.dir/build.make libraries/fc/tests/CMakeFiles/bip_lock.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/bip_lock.dir/build.make libraries/fc/tests/CMakeFiles/bip_lock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=16 "Built target bip_lock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target bip_lock"
 .PHONY : libraries/fc/tests/CMakeFiles/bip_lock.dir/all
 
 # Include target in all.
@@ -615,7 +615,7 @@ all: libraries/fc/tests/CMakeFiles/bip_lock.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/bip_lock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/bip_lock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/bip_lock.dir/rule
@@ -644,7 +644,7 @@ libraries/fc/tests/CMakeFiles/ntp_test.dir/all: libraries/fc/CMakeFiles/fc.dir/a
 libraries/fc/tests/CMakeFiles/ntp_test.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/ntp_test.dir/build.make libraries/fc/tests/CMakeFiles/ntp_test.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/ntp_test.dir/build.make libraries/fc/tests/CMakeFiles/ntp_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=84,85 "Built target ntp_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=85,86 "Built target ntp_test"
 .PHONY : libraries/fc/tests/CMakeFiles/ntp_test.dir/all
 
 # Include target in all.
@@ -654,7 +654,7 @@ all: libraries/fc/tests/CMakeFiles/ntp_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/ntp_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/ntp_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/ntp_test.dir/rule
@@ -693,7 +693,7 @@ all: libraries/fc/tests/CMakeFiles/task_cancel_test.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/task_cancel_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/task_cancel_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/task_cancel_test.dir/rule
@@ -722,7 +722,7 @@ libraries/fc/tests/CMakeFiles/blind.dir/all: libraries/fc/CMakeFiles/fc.dir/all
 libraries/fc/tests/CMakeFiles/blind.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/blind.dir/build.make libraries/fc/tests/CMakeFiles/blind.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/blind.dir/build.make libraries/fc/tests/CMakeFiles/blind.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target blind"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=22 "Built target blind"
 .PHONY : libraries/fc/tests/CMakeFiles/blind.dir/all
 
 # Include target in all.
@@ -732,7 +732,7 @@ all: libraries/fc/tests/CMakeFiles/blind.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/blind.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/blind.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/blind.dir/rule
@@ -761,7 +761,7 @@ libraries/fc/tests/CMakeFiles/api.dir/all: libraries/fc/CMakeFiles/fc.dir/all
 libraries/fc/tests/CMakeFiles/api.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/api.dir/build.make libraries/fc/tests/CMakeFiles/api.dir/depend
 	$(MAKE) -f libraries/fc/tests/CMakeFiles/api.dir/build.make libraries/fc/tests/CMakeFiles/api.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=18 "Built target api"
 .PHONY : libraries/fc/tests/CMakeFiles/api.dir/all
 
 # Include target in all.
@@ -771,7 +771,7 @@ all: libraries/fc/tests/CMakeFiles/api.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/fc/tests/CMakeFiles/api.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/fc/tests/CMakeFiles/api.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/fc/tests/CMakeFiles/api.dir/rule
@@ -816,7 +816,7 @@ libraries/chainbase/preinstall:
 libraries/chainbase/CMakeFiles/chainbase.dir/all:
 	$(MAKE) -f libraries/chainbase/CMakeFiles/chainbase.dir/build.make libraries/chainbase/CMakeFiles/chainbase.dir/depend
 	$(MAKE) -f libraries/chainbase/CMakeFiles/chainbase.dir/build.make libraries/chainbase/CMakeFiles/chainbase.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target chainbase"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target chainbase"
 .PHONY : libraries/chainbase/CMakeFiles/chainbase.dir/all
 
 # Include target in all.
@@ -873,7 +873,7 @@ libraries/protocol/CMakeFiles/achain_protocol.dir/all: libraries/fc/CMakeFiles/f
 libraries/protocol/CMakeFiles/achain_protocol.dir/all: libraries/fc/vendor/equihash/CMakeFiles/equihash.dir/all
 	$(MAKE) -f libraries/protocol/CMakeFiles/achain_protocol.dir/build.make libraries/protocol/CMakeFiles/achain_protocol.dir/depend
 	$(MAKE) -f libraries/protocol/CMakeFiles/achain_protocol.dir/build.make libraries/protocol/CMakeFiles/achain_protocol.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=1 "Built target achain_protocol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target achain_protocol"
 .PHONY : libraries/protocol/CMakeFiles/achain_protocol.dir/all
 
 # Include target in all.
@@ -883,7 +883,7 @@ all: libraries/protocol/CMakeFiles/achain_protocol.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/protocol/CMakeFiles/achain_protocol.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 62
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 63
 	$(MAKE) -f CMakeFiles/Makefile2 libraries/protocol/CMakeFiles/achain_protocol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles 0
 .PHONY : libraries/protocol/CMakeFiles/achain_protocol.dir/rule
@@ -928,7 +928,7 @@ libraries/chain/preinstall:
 libraries/chain/CMakeFiles/chain.dir/all:
 	$(MAKE) -f libraries/chain/CMakeFiles/chain.dir/build.make libraries/chain/CMakeFiles/chain.dir/depend
 	$(MAKE) -f libraries/chain/CMakeFiles/chain.dir/build.make libraries/chain/CMakeFiles/chain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=22 "Built target chain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=26 "Built target chain"
 .PHONY : libraries/chain/CMakeFiles/chain.dir/all
 
 # Include target in all.
@@ -983,7 +983,7 @@ libraries/app/preinstall:
 libraries/app/CMakeFiles/app.dir/all:
 	$(MAKE) -f libraries/app/CMakeFiles/app.dir/build.make libraries/app/CMakeFiles/app.dir/depend
 	$(MAKE) -f libraries/app/CMakeFiles/app.dir/build.make libraries/app/CMakeFiles/app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=15 "Built target app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=19 "Built target app"
 .PHONY : libraries/app/CMakeFiles/app.dir/all
 
 # Include target in all.
@@ -1059,7 +1059,7 @@ programs/achaind/preinstall:
 programs/achaind/CMakeFiles/achaind.dir/all:
 	$(MAKE) -f programs/achaind/CMakeFiles/achaind.dir/build.make programs/achaind/CMakeFiles/achaind.dir/depend
 	$(MAKE) -f programs/achaind/CMakeFiles/achaind.dir/build.make programs/achaind/CMakeFiles/achaind.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=2 "Built target achaind"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=7 "Built target achaind"
 .PHONY : programs/achaind/CMakeFiles/achaind.dir/all
 
 # Include target in all.
@@ -1290,7 +1290,7 @@ tests/CMakeFiles/main.dir/all: libraries/chainbase/CMakeFiles/chainbase.dir/all
 tests/CMakeFiles/main.dir/all: libraries/app/CMakeFiles/app.dir/all
 	$(MAKE) -f tests/CMakeFiles/main.dir/build.make tests/CMakeFiles/main.dir/depend
 	$(MAKE) -f tests/CMakeFiles/main.dir/build.make tests/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=83 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/xiaofeiqian/achain/cmake-build-debug/CMakeFiles --progress-num=84 "Built target main"
 .PHONY : tests/CMakeFiles/main.dir/all
 
 # Include target in all.

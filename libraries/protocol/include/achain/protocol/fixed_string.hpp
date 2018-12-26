@@ -140,7 +140,7 @@ namespace fc { namespace raw {
     }
 
     template<typename Stream, typename Storage>
-    inline void unpack(String& s, achain::protocol::fixed_string<Storage>& u){
+    inline void unpack(string& s, achain::protocol::fixed_string<Storage>& u){
         std::string str;
         unpack(s, str);
         u = str;

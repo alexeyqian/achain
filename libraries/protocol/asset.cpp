@@ -2,6 +2,7 @@
 #include <boost/multiprecision/cpp_int.hpp>
 
 #include <achain/protocol/asset.hpp>
+#include <string>
 
 /*
 The bounds on asset serialization are as follows:
@@ -63,9 +64,9 @@ namespace achain{
             return result + " " + symbol_name();
         }
 
-        asset asset::from_string(const string& from){
+        asset asset::from_string(const std::string& from){
             try{
-                string s = fc::trim(from);
+                std::string s = fc::trim(from);
                 auto space_pos = s.find(" ");
                 auto dot_pos = s.find(".");
 
@@ -110,8 +111,8 @@ namespace achain{
             if( std::tie( a.base.symbol, a.quote.symbol ) != std::tie( b.base.symbol, b.quote.symbol ) )
                 return false;
 
-            const auto amult = uint128_t( b.quote.amount.value ) * a.base.amount.value;
-            const auto bmult = uint128_t( a.quote.amount.value ) * b.base.amount.value;
+            const auto amult = fc::uint128_t( b.quote.amount.value ) * a.base.amount.value;
+            const auto bmult = fc::uint128_t( a.quote.amount.value ) * b.base.amount.value;
 
             return amult == bmult;
         }
@@ -123,8 +124,8 @@ namespace achain{
             if( a.quote.symbol < b.quote.symbol ) return true;
             if( a.quote.symbol > b.quote.symbol ) return false;
 
-            const auto amult = uint128_t( b.quote.amount.value ) * a.base.amount.value;
-            const auto bmult = uint128_t( a.quote.amount.value ) * b.base.amount.value;
+            const auto amult = fc::uint128_t( b.quote.amount.value ) * a.base.amount.value;
+            const auto bmult = fc::uint128_t( a.quote.amount.value ) * b.base.amount.value;
 
             return amult < bmult;
         }
@@ -154,14 +155,14 @@ namespace achain{
             if( a.symbol_name() == b.base.symbol_name() )
             {
                 FC_ASSERT( b.base.amount.value > 0 );
-                uint128_t result = (uint128_t(a.amount.value) * b.quote.amount.value)/b.base.amount.value;
+                fc::uint128_t result = (fc::uint128_t(a.amount.value) * b.quote.amount.value)/b.base.amount.value;
                 FC_ASSERT( result.hi == 0 );
                 return asset( result.to_uint64(), b.quote.symbol );
             }
             else if( a.symbol_name() == b.quote.symbol_name() )
             {
                 FC_ASSERT( b.quote.amount.value > 0 );
-                uint128_t result = (uint128_t(a.amount.value) * b.base.amount.value)/b.quote.amount.value;
+                fc::uint128_t result = (fc::uint128_t(a.amount.value) * b.base.amount.value)/b.quote.amount.value;
                 FC_ASSERT( result.hi == 0 );
                 return asset( result.to_uint64(), b.base.symbol );
             }
@@ -174,8 +175,8 @@ namespace achain{
             return price{ base, quote };
         } FC_CAPTURE_AND_RETHROW( (base)(quote) ) }
 
-        price price::max( asset_symbol_type base, asset_symbol_type quote ) { return asset( share_type(STEEMIT_MAX_SHARE_SUPPLY), base ) / asset( share_type(1), quote); }
-        price price::min( asset_symbol_type base, asset_symbol_type quote ) { return asset( 1, base ) / asset( STEEMIT_MAX_SHARE_SUPPLY, quote); }
+        price price::max( asset_symbol_type base, asset_symbol_type quote ) { return asset( share_type(ACHAIN_MAX_SHARE_SUPPLY), base ) / asset( share_type(1), quote); }
+        price price::min( asset_symbol_type base, asset_symbol_type quote ) { return asset( 1, base ) / asset( ACHAIN_MAX_SHARE_SUPPLY, quote); }
 
         bool price::is_null() const { return *this == price(); }
 

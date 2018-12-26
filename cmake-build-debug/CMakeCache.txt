@@ -640,8 +640,12 @@ ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 _Boost_COMPONENTS_SEARCHED:INTERNAL=chrono;context;coroutine;date_time;filesystem;iostreams;locale;program_options;serialization;signals;system;thread;unit_test_framework
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/lib
 //Last used Boost_LIBRARY_DIR value.
 _Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/lib
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/local/Cellar/boost@1.60/1.60.0/lib
 //Last used Boost_NAMESPACE value.
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.

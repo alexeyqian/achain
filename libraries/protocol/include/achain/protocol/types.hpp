@@ -28,7 +28,7 @@
 
 namespace achain {
 
-    struct void_t{}
+    struct void_t{};
     namespace protocol {
         typedef fixed_string_16 account_name_type;
 
@@ -41,7 +41,7 @@ namespace achain {
         typedef fc::ripemd160 transaction_id_type;
         typedef fc::ecc::compact_signature signature_type;
         
-        typedef safe<int64_t> share_type;
+        typedef fc::safe<int64_t> share_type;
         typedef uint16_t weight_type;
 
         struct public_key_type{
@@ -51,11 +51,11 @@ namespace achain {
                 fc::ecc::public_key_data data;
             };
 
-            fcc::ecc::public_key_data key_data;
+            fc::ecc::public_key_data key_data;
 
             public_key_type();
-            public_key_type(const fcc::ecc::public_key_data& data);
-            public_key_type(const fcc::ecc::public_key& pubkey);
+            public_key_type(const fc::ecc::public_key_data& data);
+            public_key_type(const fc::ecc::public_key& pubkey);
             explicit public_key_type(const std::string& base58str);
 
             operator fc::ecc::public_key_data() const;
@@ -95,7 +95,7 @@ namespace achain {
             struct binary_key{
                 binary_key(){}
                 uint32_t check = 0;
-                fc::ecc::exteded_key_data data;
+                fc::ecc::extended_key_data data;
             };
 
             fc::ecc::extended_key_data key_data;
@@ -114,7 +114,7 @@ namespace achain {
 
 namespace fc{
     void to_variant(const achain::protocol::public_key_type& var, fc::variant& vo);
-    void from_variant(const fc::variant& var, achain::protocal::public_ke_type& vo);
+    void from_variant(const fc::variant& var, achain::protocol::public_key_type& vo);
     void to_variant( const achain::protocol::extended_public_key_type& var, fc::variant& vo );
     void from_variant( const fc::variant& var, achain::protocol::extended_public_key_type& vo );
     void to_variant( const achain::protocol::extended_private_key_type& var, fc::variant& vo );

@@ -10,15 +10,14 @@
 
 namespace achain { namespace protocol {
     struct authority{
+        authority(){}
 
         enum classification{
             owner = 0,
             active = 1,
             key = 2,
             posting = 3
-        }
-
-        authority(){}
+        };
 
         template<typename ...Args >
         authority(uint32_t threshold, Args... auths)
@@ -46,8 +45,8 @@ namespace achain { namespace protocol {
         void clear();
         void validate() const;
 
-        typedef boost::flat_map<account_name_type, weight_type> account_authority_map;
-        typedef boost::flat_map<public_key_type, weight_type> key_authority_map;
+        typedef boost::container::flat_map<account_name_type, weight_type> account_authority_map;
+        typedef boost::container::flat_map<public_key_type, weight_type> key_authority_map;
 
         uint32_t weight_threshold = 0;
         account_authority_map account_auths;
@@ -56,7 +55,7 @@ namespace achain { namespace protocol {
 
     template<typename AuthorityType>
     void add_authority_accounts(
-        boost::flat_set<account_name_type>& result,
+        boost::container::flat_set<account_name_type>& result,
         const AuthorityType& a
     ){
         for(auto& item : a.account_auths)
@@ -94,7 +93,7 @@ namespace achain { namespace protocol {
      * - All letters are lowercase
      * - Length is between (inclusive) STEEMIT_MIN_ACCOUNT_NAME_LENGTH and STEEMIT_MAX_ACCOUNT_NAME_LENGTH
      */
-    bool is_valid_account_name(const string& name);
+    bool is_valid_account_name(const std::string& name);
     bool operator == (const authority& a, const authority& b);
 }}
 

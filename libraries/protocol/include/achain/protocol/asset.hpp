@@ -1,14 +1,15 @@
 #pragma once
-
+#include <string>
 #include <cstdint>
 #include <achain/protocol/config.hpp>
 #include <achain/protocol/types.hpp>
+
 
 namespace achain{ namespace protocol {
     typedef uint64_t asset_symbol_type;
 
     struct asset{
-        asset(share_type a = 0, asset_symbol_type id = COIN_SYMBOL)
+        asset(share_type a = 0, asset_symbol_type id = STEEM_SYMBOL)
         :amount(a), symbol(id){}
         
         double to_real() const{
@@ -21,8 +22,8 @@ namespace achain{ namespace protocol {
         void set_decimals(uint8_t d);
 
         std::string symbol_name() const;
-        static asset from_string(const string& from);
-        string to_string() const;
+        static asset from_string(const std::string& from);
+        std::string to_string() const;
 
         asset& operator += (const asset& o){
             FC_ASSERT(symbol == o.symbol);
@@ -79,7 +80,7 @@ namespace achain{ namespace protocol {
 
     struct price{
 
-        price(const asset& = asset(), const asset& quote = asset())
+        price(const asset& base = asset(), const asset& quote = asset())
         :base(base), quote(quote){}
 
         static price max(asset_symbol_type base, asset_symbol_type quote);
